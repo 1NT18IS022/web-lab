@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body style="background-color: white">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "Hello there This is the sentence used for the demonstration of string functions";
+        function findLen(){
+            var stlen = str.length;
+            document.getElementById("ln").innerHTML = stlen;
+        }
+        function findTxt(){
+            var txt = document.getElementById("fintxt").value;
+            console.log(txt)
+            var pos = str.search(`${txt}`)
+            document.getElementById("tx").innerHTML = pos;
+        }
+
+        function conc(){
+            var str1 = document.getElementById("conc1").value;
+            var str2 = document.getElementById("conc2").value;
+            var res = str1.concat(str2);
+            document.getElementById("conc3").innerHTML = res;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Akash S</h1>
+
+    <b>Hello there This is the sentence used for the demonstration of string functions</b>
+    <p>Try this to find out the length</p>
+    <button onclick="findLen()">Find length</button>
+    <p id="ln"></p>
+    <p>Try to find out the first occurrence of a specified text in the sring</p>
+    <input type="text" id="fintxt" placeholder="Enter specific word.." />
+    <button onclick="findTxt()">Search</button>
+    <p id="tx"></p>
+    <p> concatination</p>
+    <input type="text" id="conc1" placeholder="Enter specific word.." />
+    <input type="text" id="conc2" placeholder="Enter specific word.." />
+    <button onclick="conc()">concatinate</button>
+    <p id="conc3"></p>
+    <p> Reverse the order</p>
+
+            <button onclick="myFunction()">Click</button>
+
+            <p id="demo"></p>
+
+            <script>
+            var fruits = ["akash","ajay","chethan","jhon","sean"];
+            document.getElementById("demo").innerHTML = fruits;
+
+            function myFunction() {
+              fruits.reverse();
+              document.getElementById("demo").innerHTML = fruits;
+            }
+            </script>
+
+</body>
+</html>
