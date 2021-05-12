@@ -1,0 +1,61 @@
+<html>
+
+<body style="background-color:powderblue;">
+<br><b> Choose any planet: </b><br>
+
+<input type="radio" id="venus" value="venus" name = "planet">venus<br>
+<input type="radio" id="jupiter" value="jupiter" name = "planet">jupiter<br>
+<input type="radio" id="earth" value="earth" name = "planet">earth<br>
+<input type="radio" id="mars" value="mars" name = "planet">mars<br><br>
+
+<button type="button" onclick=" radioButton()"> Submit </button>
+
+<h3 id="disp" style= "color:green"> </h3>
+<h3 id="disp1" style= "color:red"> </h3>
+<h3 id="disp2" style= "color:green"> </h3>
+<h3 id="disp3" style= "color:red"> </h3>
+
+</body>
+
+<script>
+function planets(distance,inclination,elements,size,){
+        this.distance = distance;
+         this.inclination=inclination;
+         this.elements = elements;
+         this.size = size;
+
+}
+function radioButton() {
+            if(document.getElementById('earth').checked) {
+                document.getElementById("disp").innerHTML  = planets.distance = 'Distance from sun : 151.06 million km';
+                document.getElementById("disp1").innerHTML =  planets.inclination = 'inclination :23.50 degrees';
+                document.getElementById("disp2").innerHTML =  planets.elements = 'elements:air ,fire , water';
+                document.getElementById("disp3").innerHTML = planets.size = 'size:6371'
+                      ;
+
+            }
+            else if(document.getElementById('mars').checked) {
+                document.getElementById("disp").innerHTML  = planets.distance = 'Distance from sun :247.72 million km';
+                document.getElementById("disp1").innerHTML =  planets.inclination = 'inclination :25.19 degrees';
+                document.getElementById("disp2").innerHTML =  planets.elements = 'elements:silicon, oxygen, iron, magnesium, aluminum, calcium, and potassium';
+                document.getElementById("disp3").innerHTML = planets.size = 'size:3,389.5';
+            }
+            else if(document.getElementById('venus').checked) {
+                document.getElementById("disp").innerHTML  = planets.distance = 'Distance from sun :80.06 million km';
+                document.getElementById("disp1").innerHTML =  planets.inclination = 'inclination :21.08 degrees';
+                document.getElementById("disp2").innerHTML =  planets.elements = 'elements:silicon, oxygen, iron, magnesium, aluminum, calcium, and potassium';
+                document.getElementById("disp3").innerHTML = planets.size = 'size:6,051.8';
+            }
+            else if(document.getElementById('jupiter').checked) {
+                document.getElementById("disp").innerHTML  = planets.distance = 'Distance from sun :756.52 million km';
+                document.getElementById("disp1").innerHTML =  planets.inclination = 'inclination :32.15 degrees';
+                document.getElementById("disp2").innerHTML =  planets.elements = 'elements:hydrogen and helium';
+                document.getElementById("disp3").innerHTML = planets.size = 'size:139,820';
+            }
+            else {
+                document.getElementById("error").innerHTML
+                    = "You have not selected any season";
+            }
+        }
+    </script>
+</html>
