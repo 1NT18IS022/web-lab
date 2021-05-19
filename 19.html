@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Errors</title>
+
+<style>
+	body{
+		text-align: center;
+		background-image: url(https://image.freepik.com/free-photo/abstract-blur-green-color-background_7182-1948.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+</style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <h1 class="display-4">Error Handling</h1>
+  <p class="lead">The name property of the Error object returns the name of the error and the message property returns a description of the error:</p>
+  <p id="de" style="color:red"></p>
+</div>
+
+
+<hr class="my-4">
+ <p class="card-text">Enter a number</p>
+    <input id="d" type="text">
+    <button type="button" onclick="myFunction()"class="btn btn-success">Submit</button>
+     <p id="p01" style="color:red"></p>
+
+
+<script>
+try {
+  num.toUpperCase();
+}
+catch(err) {
+  document.getElementById("de").innerHTML =  err.message;
+}
+
+function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("d").value;
+  try {
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+
+</body>
+</html>
